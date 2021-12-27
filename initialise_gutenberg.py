@@ -9,6 +9,7 @@ import argparse
 import numpy as np
 import nltk.corpus as corpus
 import nltk.tokenize as tokenize
+import os
 from array import array
 from nltk.probability import FreqDist
 from nltk.stem.snowball import SnowballStemmer
@@ -72,6 +73,8 @@ def compute():
                     if element[1] >= new_position and element_id != word_id:
                         element[1] += 1
         PRINT_PERCENTAGE(document_id + 1, len(filename_list))
+    
+    os.makedirs(os.path.dirname(irs.IR_DATA_PATH), exist_ok=True)
 
     dictionary = np.array(dictionary)
     np.save(irs.IR_DATA_PATH + DICTIONARY_FILENAME, dictionary)
