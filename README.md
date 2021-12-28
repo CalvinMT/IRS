@@ -47,6 +47,8 @@ If a word in the query is not part of the dictionary, a warning is printed out: 
 
 This example uses the Cranfield datatset. It is possible to download it here: http://ir.dcs.gla.ac.uk/resources/test_collections/cran/
 
+The downloaded files are then placed under the following folder: `datasets/cranfield/` (not datatsets/cran/).
+
 1. Initialisation
 
 After creating an initialisation program according to the dataset's format, running it will create three files associated to this dataset.
